@@ -5,13 +5,17 @@ import {Woman} from './src/woman'
 declare function require(name:string);
 const process = require('process');
 
+//2. task
+import {Delegate} from "./src/delegate";
+const delegate = new Delegate()
+
 /** BEFORE YOU START
  *  Please create github repo where you will store your solution
  *  After every task please commit and push changes
  * */
 
-const sebastian = new Man()
-const natalia = new Woman()
+const sebastian = new Man(delegate)
+const natalia = new Woman(delegate)
 
 //1.  Expected output: 4:13:02 PM
 const getDate = () =>{
@@ -31,9 +35,8 @@ sebastian.say('Are you free?')
 process.stdout.write(getDate() + '\n');
 natalia.say('No I have a boyfriend')
 
-/** 2.
-
- * */
+// 2nd task output
+console.log(delegate.getDelegates());
 
 /** 3.
 
