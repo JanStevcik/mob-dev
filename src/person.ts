@@ -9,16 +9,18 @@ export interface PersonDelegates {
 export class Person {
     private tongue = new Tongue()
     private delegates: PersonDelegates | undefined
+    private name: string
 
-    constructor(delegates: PersonDelegates | undefined) {
+    constructor(delegates: PersonDelegates | undefined, name?:string) {
         this.delegates = delegates
         if (this.delegates?.onBorn) {
             this.delegates.onBorn()
         }
+        this.name = name && name || 'Person'
     }
 
     say(message: string) {
-        this.tongue.tell(message)
+        this.tongue.tell(message, this.name)
         if (this.delegates?.log) {
             this.delegates.log(message)
         }

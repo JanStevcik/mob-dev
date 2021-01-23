@@ -14,8 +14,8 @@ const delegate = new Delegate()
  *  After every task please commit and push changes
  * */
 
-const sebastian = new Man(delegate)
-const natalia = new Woman(delegate)
+const sebastian = new Man(delegate,'Sebastian')
+const natalia = new Woman(delegate,'Natalia')
 
 //1.  Expected output: 4:13:02 PM
 const getDate = () =>{
