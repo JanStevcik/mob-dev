@@ -10,6 +10,7 @@ class World {
     private delegate = new Delegate()
     private natalia = new Woman(this.delegate, 'Natalia')
     private sebastian = new Man(this.delegate, 'Sebastian')
+    private nicolas = new Man(this.delegate, 'Nicolas')
 
     constructor() {
     }
@@ -31,6 +32,9 @@ class World {
 
         process.stdout.write(this.getDate() + '\n')
         this.natalia.say('No I have a boyfriend')
+
+        process.stdout.write(this.getDate() + '\n')
+        this.nicolas.say(':D Nope, she is alone...  right now :D')
     }
 
     public printLogs(){

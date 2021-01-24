@@ -3,7 +3,7 @@ import {PersonDelegates} from "./person";
 export class Delegate implements PersonDelegates{
     private delegates: Array<string> = []
 
-    log(message: any): void {
+    log(message: string): void {
         this.delegates.push(message)
     }
 
